@@ -32,4 +32,14 @@ class GoedeDoelTest {
 		}
 		return false;
 	}
+
+	@Test
+	void doelenMetDezelfdeNaamZijnGelijk() {
+		assertThat(doel).isEqualTo(new GoedeDoel(NAAM));
+	}
+
+	@Test
+	void doelenMetVerschillendeNaamZijnVerschillend() {
+		assertThat(doel).isNotEqualTo(new GoedeDoel("WWF"));
+	}
 }
