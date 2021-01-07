@@ -1,9 +1,9 @@
 package be.vdab.goededoel.domain;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 class GoedeDoelTest {
 	private static final String NAAM = "CliniClowns";
@@ -21,6 +21,6 @@ class GoedeDoelTest {
 
 	@Test
 	void eenNieuwDoelHeeftNogGeenOpbrengst() {
-		assertThat(doel.getOpbrengst()).isZero();
+		assertThat(doel.getOpbrengst()).isNotZero();
 	}
 }
