@@ -23,17 +23,9 @@ class GoedeDoelTest {
 
 	@Test
 	void eenNieuwDoelHeeftNogGeenOpbrengst() {
-		assertThat(doel.getOpbrengst()).isNotZero();
+		assertThat(doel.getOpbrengst()).isZero();
 	}
 
-	@Override
-	public boolean equals(Object object) {
-		if (object instanceof GoedeDoel) {
-			GoedeDoel ander = (GoedeDoel) object;
-			return NAAM.equalsIgnoreCase(ander.getNaam());
-		}
-		return false;
-	}
 
 	@Test
 	void doelenMetDezelfdeNaamZijnGelijk() {
