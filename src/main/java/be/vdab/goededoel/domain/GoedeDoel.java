@@ -22,4 +22,13 @@ public class GoedeDoel {
    public BigDecimal getOpgebracht() {
       return opgebracht;
    }
+
+   @Override
+   public boolean equals(Object object) {
+      if (object instanceof GoedeDoel) {
+         GoedeDoel ander = (GoedeDoel) object;
+         return naam.equalsIgnoreCase(ander.naam);
+      }
+      return false;
+   }
 }
